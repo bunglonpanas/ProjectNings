@@ -19,28 +19,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnLogin = findViewById(R.id.btnLogin);
+//        btnLogin = findViewById(R.id.btnLogin);
         btnLoginAdmin = findViewById(R.id.btnLoginAdmin);
-        chkbx = findViewById(R.id.chkboxLogin);
+//        chkbx = findViewById(R.id.chkboxLogin);
 
-        chkbx.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                //is chkIos checked?
-                if (((CheckBox) v).isChecked()) {
-                    btnLogin.setVisibility(View.GONE);
-                    btnLoginAdmin.setVisibility(View.VISIBLE);
-                }
-                else
-                {
-                    btnLogin.setVisibility(View.VISIBLE);
-                    btnLoginAdmin.setVisibility(View.GONE);
-                }
-                //case 2
-
-            }
-        });
+//        chkbx.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                //is chkIos checked?
+//                if (((CheckBox) v).isChecked()) {
+//                    btnLogin.setVisibility(View.GONE);
+//                    btnLoginAdmin.setVisibility(View.VISIBLE);
+//                }
+//                else
+//                {
+//                    btnLogin.setVisibility(View.VISIBLE);
+//                    btnLoginAdmin.setVisibility(View.GONE);
+//                }
+//                //case 2
+//
+//            }
+//        });
         // RESPON UNTUK AKSI KLIK PADA TOMBOL
 
     }

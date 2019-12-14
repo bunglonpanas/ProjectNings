@@ -74,10 +74,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 //        database.close();
 //    }
 //
-//    public Cursor getData(String sql) {
-//        SQLiteDatabase database = getReadableDatabase();
-//        return database.rawQuery(sql, null);
-//    }
+    public Cursor getData(String sql) {
+        SQLiteDatabase database = getReadableDatabase();
+        return database.rawQuery(sql, null);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {

@@ -46,7 +46,7 @@
             android:text="Items"
             android:textColor="@color/colorBlack"
             android:textSize="35sp"
-            android:textStyle="bold" />
+             />
 
         <View
             android:id="@+id/line1"
@@ -63,6 +63,25 @@
             android:layout_below="@id/textItems"
             android:layout_marginTop="5dp"
             android:background="@color/colorBlack" />
+        <view class="androidx.appcompat.app.AlertController$RecycleListView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/line2"
+            android:layout_marginTop="20dp"
+            app:toolbarId="@layout/row_barang"
+            android:layout_height="wrap_content">
+
+        </view>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_below="@id/line2"-->
+<!--            tools:listitem="@layout/row_barang"-->
+<!--            android:layout_height="wrap_content"/>-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_below="@id/line2"
+            android:id="@+id/listView"
+            tools:listitem="@layout/row_barang"
+            android:layout_height="match_parent"/>
     </RelativeLayout>
 
 </ScrollView>

@@ -5,15 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TransaksiActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp">
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/actionBar"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Record"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </androidx.appcompat.widget.Toolbar>
         <ImageView
             android:id="@+id/imageView"
-            android:layout_alignParentTop="true"
             android:background="@color/colorPrimaryDark"
             android:layout_width="160dp"
+            android:layout_below="@id/actionBar"
             android:layout_height="160dp"
             android:src="@drawable/addphoto"
             android:layout_centerHorizontal="true"

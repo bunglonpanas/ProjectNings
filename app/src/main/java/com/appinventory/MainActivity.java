@@ -9,17 +9,24 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
+import com.appinventory.Helper.SQLiteHelper;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnLogin;
     Button btnLoginAdmin;
     CheckBox chkbx;
+    public static SQLiteHelper mSQLiteHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mSQLiteHelper = new SQLiteHelper(this, "RECORDDB.sqlite", null, 1);
 //        btnLogin = findViewById(R.id.btnLogin);
+        mSQLiteHelper.queryData("CREATE TABLE IF NOT EXISTS RECORD " +
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name VARCHAR, safetyStock INTEGER, optimumStock INTEGER, currentStock INTEGER, " +
+                "price VARCHAR, note VARCHAR,tags VARCHAR,image BLOB)");
         btnLoginAdmin = findViewById(R.id.btnLoginAdmin);
 //        chkbx = findViewById(R.id.chkboxLogin);
 
